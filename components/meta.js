@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import { colors } from './theme'
 
-const name = '2019 in Review – @lachlanjc'
+const name = '2020 in Review – @lachlanjc'
 const makeTitle = title => (title === name ? title : `${title} – ${name}`)
 
 const Meta = ({
   title = name,
-  description = 'Looking back at Lachlan Campbell’s 2019.',
-  image = 'https://2019.lachlanjc.com/card.png',
+  description = 'Looking back at Lachlan Campbell’s 2020.',
+  image = 'https://2020.lachlanjc.com/card.png',
   color = colors.primary
 }) => (
   <Head>

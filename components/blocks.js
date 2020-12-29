@@ -3,7 +3,7 @@ import Image from 'next/image'
 import YouTubePlayer from 'react-player/youtube'
 import theme from './theme'
 
-export const YouTube = (props) => (
+export const YouTube = props => (
   <Box
     sx={{
       boxShadow: 'elevated',
@@ -14,8 +14,9 @@ export const YouTube = (props) => (
       lineHeight: 0,
       overflow: 'hidden',
       width: '100%',
-      ...props.sx,
-    }}>
+      ...props.sx
+    }}
+  >
     <YouTubePlayer
       width="100%"
       height={256}
@@ -26,7 +27,15 @@ export const YouTube = (props) => (
   </Box>
 )
 
-export const Photo = ({ src, width, height, alt, showAlt = true, top = false, ...props }) => {
+export const Photo = ({
+  src,
+  width,
+  height,
+  alt,
+  showAlt = true,
+  top = false,
+  ...props
+}) => {
   const [colorMode] = useColorMode()
   return (
     <Box
@@ -40,7 +49,7 @@ export const Photo = ({ src, width, height, alt, showAlt = true, top = false, ..
         lineHeight: 0,
         overflow: 'hidden',
         height: 'fit-content',
-        ...props.sx,
+        ...props.sx
       }}
     >
       <Image
@@ -52,27 +61,30 @@ export const Photo = ({ src, width, height, alt, showAlt = true, top = false, ..
         objectFit="cover"
         objectPosition="center"
       />
-      {(showAlt && alt) && (
-        <Text
-          as="figcaption"
-          variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
-          children={alt}
-          sx={{
-            display: 'block',
-            fontSize: 1,
-            lineHeight: 'body',
-            pt: 2,
-            px: 3,
-            position: 'absolute',
-            [top ? 'top' : 'bottom']: 0,
-            height: 'fit-content',
-            borderRadius: top ? `${theme.radii.extra}px ${theme.radii.extra}px 0 0` : `0 0 ${theme.radii.extra}px ${theme.radii.extra}px`,
-            width: '100%',
-            maxWidth: '100%',
-            zIndex: 1
-          }}
-        />
-      )}
+      {showAlt &&
+        alt && (
+          <Text
+            as="figcaption"
+            variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
+            children={alt}
+            sx={{
+              display: 'block',
+              fontSize: 1,
+              lineHeight: 'body',
+              pt: 2,
+              px: 3,
+              position: 'absolute',
+              [top ? 'top' : 'bottom']: 0,
+              height: 'fit-content',
+              borderRadius: top
+                ? `${theme.radii.extra}px ${theme.radii.extra}px 0 0`
+                : `0 0 ${theme.radii.extra}px ${theme.radii.extra}px`,
+              width: '100%',
+              maxWidth: '100%',
+              zIndex: 1
+            }}
+          />
+        )}
     </Box>
   )
 }

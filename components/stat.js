@@ -44,13 +44,18 @@ const Stat = ({ value, label, color = 'currentColor' }) => (
     }}
   >
     <Arc />
-    <Text as="span" sx={{
-      fontWeight: 'bold',
-      lineHeight: 'title',
-      letterSpacing: 'title',
-      fontSize: value.toString().length > 2 ? 4 : 6,
-      lineHeight: '64px'
-    }}>{value}</Text>
+    <Text
+      as="span"
+      sx={{
+        fontWeight: 'bold',
+        lineHeight: 'title',
+        letterSpacing: 'title',
+        fontSize: value.toString().length > 2 ? 4 : 6,
+        lineHeight: '64px'
+      }}
+    >
+      {value}
+    </Text>
     <Badge
       as="span"
       variant="pill"

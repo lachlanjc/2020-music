@@ -1,5 +1,5 @@
-# 2019
+# 2020
 
-[@lachlanjc](https://lachlanjc.com)’s 2019 year in review!
+[@lachlanjc](https://lachlanjc.com)’s 2020 year in review!
 
-[**2019.lachlanjc.com**](https://2019.lachlanjc.com)
+[**2020.lachlanjc.com**](https://2020.lachlanjc.com)

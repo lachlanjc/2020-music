@@ -50,7 +50,7 @@ const Movement = () => {
         <XAxis
           dataKey="date"
           tickFormatter={n =>
-            new Date(n).toLocaleDateString('en-us').replace('/2019', '')
+            new Date(n).toLocaleDateString('en-us').replace('/2020', '')
           }
         />
         <YAxis

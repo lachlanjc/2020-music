@@ -42,7 +42,12 @@ const Footer = () => {
       {pathname !== '/' && (
         <Link href="/" passHref>
           <Card as="a" sx={{ overflow: 'hidden' }}>
-            <BGImg src="/cover.jpg" width={2224} height={1251} alt="New York at sunset, cover image" />
+            <BGImg
+              src="/cover.jpg"
+              width={2224}
+              height={1251}
+              alt="New York at sunset, cover image"
+            />
             <h2>Story</h2>
           </Card>
         </Link>

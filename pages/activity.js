@@ -11,7 +11,7 @@ const ActivityPage = () => (
   <Box as="main" sx={{ color: 'text' }}>
     <Meta
       title="Activity"
-      description="Lachlan Campbell’s activity, productivity, health, & travel of 2019."
+      description="Lachlan Campbell’s activity, productivity, health, & travel of 2020."
     />
     <Header bg="primary">Activity</Header>
     <Grid
@@ -36,7 +36,7 @@ const ActivityPage = () => (
       <Heading as="h2" variant="headline">
         GitHub
       </Heading>
-      <GitHub username="lachlanjc" years={[2019]} fullYear={false} />
+      <GitHub username="lachlanjc" years={[2020]} fullYear={false} />
       <Repos />
     </Container>
     <Heading as="h2" variant="headline">

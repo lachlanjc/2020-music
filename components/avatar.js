@@ -12,4 +12,3 @@ const Avatar = ({ size = 32, ...props }) => (
 )
 
 export default Avatar
-

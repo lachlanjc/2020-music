@@ -183,7 +183,7 @@ const theme = {
         transform: 'scale(1.0625)',
         boxShadow: 'elevated'
       }
-    },
+    }
   },
   layout: {
     container: {
@@ -227,7 +227,7 @@ const theme = {
     },
     a: {
       color: 'primary',
-      textUnderlinePosition: 'under',
+      textUnderlinePosition: 'under'
     },
     code: {
       fontFamily: 'monospace',
@@ -239,7 +239,9 @@ const theme = {
     hr: {
       border: 0,
       py: 1,
-      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange} 100%)`,
+      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${
+        colors.orange
+      } 100%)`,
       borderRadius: 999,
       maxWidth: 256,
       mx: 'auto',

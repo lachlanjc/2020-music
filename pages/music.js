@@ -20,7 +20,7 @@ const MusicPage = () => {
 
   return (
     <Box as="main" sx={{ color: 'text' }}>
-      <Meta title="Music" description="Lachlan Campbell’s top music of 2019." />
+      <Meta title="Music" description="Lachlan Campbell’s top music of 2020." />
       <Header bg="music">Music</Header>
       <Container variant="wide">
         <Heading as="h2" variant="headline">
@@ -30,7 +30,7 @@ const MusicPage = () => {
           <Artist
             label="Best New Artist"
             name="Conan Gray"
-            artwork="https://images.sk-static.com/images/media/img/col6/20190206-182210-650598.jpg"
+            artwork="https://images.sk-static.com/images/media/img/col6/20200206-182210-650598.jpg"
           >
             Conan is hands-down my favorite new artist—stand-out style &
             songwriting. Seeing him live twice this year was a joy.
@@ -41,22 +41,21 @@ const MusicPage = () => {
             artist="Lauv & Troye Sivan"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/05/c7/1b/05c71b41-8627-37a3-6fc4-0f1a2272a18c/source/1024x1024bb.png"
           >
-            This song isn’t super deep or groundbreaking, but it’s perfect pop, & I’m a sucker for that.
+            This song isn’t super deep or groundbreaking, but it’s perfect pop,
+            & I’m a sucker for that.
           </Album>
           <Album
             label="Album of the Year"
             name="WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?"
             artist="Billie Eilish"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/ff/4a/eb/ff4aeb7c-7f2d-1d18-d7cc-51c107c70bad/source/512x512bb.png"
-          >
-          </Album>
+          />
           <Album
             label="EP of the Year"
             name="Crystalline"
             artist="Bülow"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/e2/1c/ac/e21cacac-ff21-2f31-a92d-9f43dda6cbf6/source/1024x1024bb.png"
-          >
-          </Album>
+          />
         </Grid>
         <Heading as="h2" variant="headline">
           Songs of the month
