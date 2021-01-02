@@ -3,7 +3,6 @@ import Meta from '../components/meta'
 import Header from '../components/header'
 import Stat from '../components/stat'
 import Repos from '../components/activity/repos'
-import Movement from '../components/activity/movement'
 import Rings from '../components/activity/rings'
 import GitHub from 'react-github-calendar'
 
@@ -23,7 +22,7 @@ const ActivityPage = () => (
       <Stat value={7} label="hackathons" color="red" />
       <Stat value="2.5M" label="steps" color="orange" />
       <Stat value={23} label="cities" color="green" />
-      <Stat value={24} label="flights" color="blue" />
+      <Stat value={1} label="flight" color="blue" />
     </Grid>
     <Container
       variant="copy"
@@ -42,7 +41,6 @@ const ActivityPage = () => (
     <Heading as="h2" variant="headline">
       Daily steps
     </Heading>
-    <Movement />
     <Container
       sx={{ text: { fill: 'currentColor !important', opacity: 0.75 } }}
     >

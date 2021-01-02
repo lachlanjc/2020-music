@@ -6,11 +6,9 @@ import Header from '../components/header'
 import SongList from '../components/music/song-list'
 import Player from '../components/music/player'
 
+import twentyAlbums from '../data/twenty-albums.json'
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
-import spring from '../data/spring-songs.json'
-import summer from '../data/summer-songs.json'
-import fall from '../data/fall-songs.json'
 import { capitalize } from 'lodash'
 
 const seasons = { spring, summer, fall }
@@ -29,7 +27,7 @@ const MusicPage = () => {
         <Grid gap={4} columns={[null, 2]} sx={{ mb: [4, 5] }}>
           <Artist
             label="Best New Artist"
-            name="Conan Gray"
+            name="Rina Sawayama"
             artwork="https://images.sk-static.com/images/media/img/col6/20200206-182210-650598.jpg"
           >
             Conan is hands-down my favorite new artist—stand-out style &
