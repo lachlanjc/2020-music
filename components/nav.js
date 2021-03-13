@@ -87,7 +87,7 @@ const Nav = () => {
               sx={{ mr: 2, transition: 'box-shadow .125s ease-in-out' }}
             />
             <NavLink as="span" sx={{ color: 'inherit !important' }}>
-              2020 in Review
+              One More Year
             </NavLink>
           </Flex>
         </Link>
