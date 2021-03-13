@@ -159,6 +159,7 @@ const Header = () => {
         position: 'relative',
         bg: 'elevated',
         pb: '9vh',
+        mb: '9vh',
         'div, canvas': {
           minHeight: ['75vh', '50vh'],
           display: 'block',

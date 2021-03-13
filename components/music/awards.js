@@ -3,8 +3,14 @@ import Artwork from './artwork'
 
 const Label = props => (
   <Text
-    as="span"
-    sx={{ color: 'music', textTransform: 'uppercase' }}
+    as="strong"
+    sx={{
+      color: 'muted',
+      fontSize: 2,
+      letterSpacing: 'headline',
+      fontFamily: 'heading',
+      textTransform: 'uppercase',
+    }}
     {...props}
   />
 )
@@ -16,14 +22,18 @@ const Name = ({ fontSize, ...props }) => (
       fontSize: props.children.length > 32 ? [2, 3, 4] : [2, 3, 4, 5],
       display: 'block',
       lineHeight: 'heading',
-      my: 1
+      my: 1,
     }}
     {...props}
   />
 )
 
-const Comment = props => (
-  <Text as="p" sx={{ color: 'secondary', fontSize: 1 }} {...props} />
+export const Comment = props => (
+  <Text
+    as="p"
+    sx={{ color: 'secondary', fontFamily: 'body', fontSize: 1 }}
+    {...props}
+  />
 )
 
 export const Artist = ({ label, name, artwork, children }) => (
@@ -60,7 +70,7 @@ export const Album = ({ label, name, artwork, artist, children, ...props }) => (
         <Text
           as="span"
           variant="caption"
-          sx={{ fontSize: [1, 2], color: 'muted' }}
+          sx={{ fontFamily: 'body', fontSize: [1, 2], color: 'muted' }}
         >
           {artist}
         </Text>

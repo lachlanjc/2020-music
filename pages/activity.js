@@ -1,6 +1,5 @@
 import { Box, Container, Grid, Heading } from 'theme-ui'
 import Meta from '../components/meta'
-import Header from '../components/header'
 import Stat from '../components/stat'
 import Repos from '../components/activity/repos'
 import Rings from '../components/activity/rings'
@@ -12,7 +11,6 @@ const ActivityPage = () => (
       title="Activity"
       description="Lachlan Campbell’s activity, productivity, health, & travel of 2020."
     />
-    <Header bg="primary">Activity</Header>
     <Grid
       variant="layout.copy"
       columns={[2, 4]}
@@ -29,7 +27,7 @@ const ActivityPage = () => (
       sx={{
         mb: [4, 5],
         article: { display: 'block', height: 133 },
-        text: { fill: 'currentColor !important', opacity: 0.75 }
+        text: { fill: 'currentColor !important', opacity: 0.75 },
       }}
     >
       <Heading as="h2" variant="headline">

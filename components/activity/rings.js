@@ -2,7 +2,7 @@ import { Grid, Heading, Flex } from 'theme-ui'
 import Ring from './ring'
 import { padMonth, getMonth } from '../util'
 import { times, keys, filter, startsWith } from 'lodash'
-import activity from '../../data/rings.json'
+import activity from '../../public/data/activity-2020.json'
 
 const Rings = () => (
   <Grid
@@ -13,7 +13,7 @@ const Rings = () => (
       gridRowGap: [4, null, null, null, 5],
       gridColumnGap: [3, 4],
       listStyle: 'none',
-      px: [2, 3, 4]
+      px: [2, 3, 4],
     }}
   >
     {times(12, month => (
@@ -43,13 +43,13 @@ const Rings = () => (
                     top: -2,
                     right: -2,
                     width: 12,
-                    textAlign: 'right'
-                  }
+                    textAlign: 'right',
+                  },
                 }}
               >
                 <Ring size={48} {...activity[date]} />
               </Flex>
-            )
+            ),
           )}
         </Grid>
       </li>
