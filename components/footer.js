@@ -4,7 +4,7 @@ import BGImg from './bg-img'
 import { Container, Box, Grid, Card } from 'theme-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Headphones } from 'react-feather'
+import { Earbuds as Headphones } from 'react-bootstrap-icons'
 
 const Footer = () => {
   const { pathname } = useRouter()
@@ -29,14 +29,14 @@ const Footer = () => {
             position: 'absolute',
             top: 3,
             right: 3,
-            opacity: 0.875
-          }
+            opacity: 0.875,
+          },
         },
         h2: {
           variant: 'text.headline',
           textAlign: 'left',
-          mb: 0
-        }
+          mb: 0,
+        },
       }}
     >
       {pathname !== '/' && (
@@ -66,7 +66,7 @@ const Footer = () => {
             as="a"
             sx={{
               bg: 'music',
-              backgroundImage: 'linear-gradient(#fa5b73, #fa233b)'
+              backgroundImage: 'linear-gradient(#fa5b73, #fa233b)',
             }}
           >
             <Headphones size={96} />
@@ -85,12 +85,12 @@ const Footer = () => {
           maxWidth: 640,
           fontFamily: 'accent',
           p: { color: 'secondary' },
-          a: { color: 'primary' }
+          a: { color: 'primary' },
         }}
       >
         <Content />
       </Container>
-    </Box>
+    </Box>,
   ]
 }
 

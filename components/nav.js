@@ -8,7 +8,7 @@ import {
   NavLink,
 } from 'theme-ui'
 import Link from 'next/link'
-import { Moon } from 'react-feather'
+import { Moon } from 'react-bootstrap-icons'
 
 const NavButton = ({ sx, ...props }) => (
   <IconButton

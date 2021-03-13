@@ -1,7 +1,11 @@
 import useComponentSize from '@rehooks/component-size'
 import { useState, useRef } from 'react'
 import { Box, Flex, IconButton, useColorMode } from 'theme-ui'
-import { VideoOff, Maximize, X } from 'react-feather'
+import {
+  CameraVideoOff as VideoOff,
+  PlayBtn as Maximize,
+  XCircle as X,
+} from 'react-bootstrap-icons'
 import Embed from 'react-song-embed'
 
 const TOOLBAR_HEIGHT = 40
@@ -31,7 +35,8 @@ const Player = ({ url, onClose }) => {
         zIndex: 3,
         overflow: 'hidden',
         transition: 'transform 0.375s ease-in-out',
-        transform: (url !== null && url !== '') ? 'translateY(0)' : 'translateY(200%)'
+        transform:
+          url !== null && url !== '' ? 'translateY(0)' : 'translateY(200%)',
       }}
     >
       <Flex
@@ -39,15 +44,19 @@ const Player = ({ url, onClose }) => {
         sx={{
           p: 1,
           height: TOOLBAR_HEIGHT,
-          bg: 'music',
+          bg: 'accent',
           color: 'white',
           justifyContent: 'flex-end',
           button: {
             ml: 2,
             transition: '0.125s ease-in-out all',
             ':hover,:focus': { opacity: 0.8 },
-            ':active': { transform: 'scale(0.875)' }
-          }
+            ':active': { transform: 'scale(0.875)' },
+          },
+          svg: {
+            width: 24,
+            height: 24,
+          },
         }}
       >
         <IconButton onClick={e => setMini(m => !m)} mr={2}>

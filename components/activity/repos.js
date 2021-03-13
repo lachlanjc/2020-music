@@ -1,4 +1,4 @@
-import { Book } from 'react-feather'
+import { JournalCode as Book } from 'react-bootstrap-icons'
 import { Grid, Flex, Text } from 'theme-ui'
 import Content from './repos.mdx'
 import { MDXProvider } from '@mdx-js/react'
@@ -12,7 +12,7 @@ export const Repo = ({ children }) => (
       p: 2,
       borderRadius: 'default',
       border: '1px solid',
-      borderColor: 'border'
+      borderColor: 'border',
     }}
     as="a"
     href={`https://github.com/${children}`}
@@ -33,7 +33,7 @@ const Repos = () => (
   <MDXProvider
     components={{
       ul: RepoList,
-      li: Repo
+      li: Repo,
     }}
   >
     <Content />
