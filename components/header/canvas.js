@@ -2,11 +2,10 @@
 import * as THREE from 'three'
 import gsap from 'gsap'
 import React, { Suspense, useEffect, useMemo, useRef } from 'react'
-import { Box } from 'theme-ui'
 import { useLoader, useUpdate } from 'react-three-fiber'
-import usePrefersMotion from '../lib/use-prefers-motion'
+import usePrefersMotion from '../../lib/use-prefers-motion'
 import { Canvas, useFrame } from 'react-three-fiber'
-import { Environment } from 'drei'
+import { Environment } from '@react-three/drei'
 
 function Text({
   children,
@@ -150,37 +149,4 @@ const HeaderCanvas = () => {
   )
 }
 
-const Header = () => {
-  return (
-    <Box
-      as="header"
-      aria-label="One More Year"
-      sx={{
-        position: 'relative',
-        bg: 'elevated',
-        pb: '9vh',
-        mb: '9vh',
-        'div, canvas': {
-          minHeight: ['75vh', '50vh'],
-          display: 'block',
-        },
-        '::after': {
-          content: '""',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          display: 'block',
-          position: 'absolute',
-          height: '9vh',
-          transform: 'translateY(9vh)',
-          backgroundImage: t =>
-            `linear-gradient(to bottom, ${t.colors.elevated}, ${t.colors.background})`,
-        },
-      }}
-    >
-      <HeaderCanvas />
-    </Box>
-  )
-}
-
-export default Header
+export default HeaderCanvas
