@@ -16,7 +16,7 @@ export const colors = {
   yellow: '#f1c40f',
   green: '#33d6a6',
   cyan: '#5bc0de',
-  blue: '#338eda'
+  blue: '#338eda',
 }
 
 const theme = {
@@ -27,16 +27,16 @@ const theme = {
   useColorSchemeMediaQuery: true,
   colors: {
     ...colors,
-    text: colors.black,
-    background: colors.white,
-    elevated: colors.white,
-    sunken: colors.smoke,
-    border: colors.smoke,
-    placeholder: colors.muted,
+    text: '#470C06',
+    background: '#fdeee1',
+    elevated: '#f6d3b4',
+    sunken: '#F6D3B4',
+    border: '#F6D3B4',
+    placeholder: '#E1C2A6',
     secondary: colors.slate,
-    primary: colors.cyan,
-    muted: colors.muted,
-    accent: colors.yellow,
+    primary: '#E32310',
+    muted: '#CF876B',
+    accent: '#69A5A8',
     music: '#ff365d',
     modes: {
       dark: {
@@ -46,18 +46,19 @@ const theme = {
         sunken: colors.darker,
         border: colors.darkless,
         placeholder: colors.slate,
-        secondary: colors.muted
-      }
-    }
+        secondary: colors.muted,
+      },
+    },
   },
   fonts: {
     heading:
-      '"Roobert", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      'ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     body:
-      '"Roobert", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      'ui-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     accent:
       '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    monospace: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
+    monospace:
+      'ui-monospace, "SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace',
   },
   lineHeights: {
     limit: 0.875,
@@ -65,16 +66,16 @@ const theme = {
     heading: 1.125,
     subheading: 1.25,
     caption: 1.375,
-    body: 1.5
+    body: 1.5,
   },
   fontWeights: {
     body: 400,
     bold: 700,
-    heading: 700
+    heading: 700,
   },
   letterSpacings: {
     title: '-0.009em',
-    headline: '0.009em'
+    headline: '0.009em',
   },
   sizes: {
     widePlus: 2048,
@@ -84,34 +85,35 @@ const theme = {
     copyPlus: 768,
     copy: 680,
     narrowPlus: 600,
-    narrow: 512
+    narrow: 512,
   },
   radii: {
     default: 6,
     extra: 9,
-    circle: 99999
+    circle: 99999,
   },
   shadows: {
     small: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 2px 4px rgba(0, 0, 0, 0.0625)',
     card: '0 4px 8px rgba(0, 0, 0, 0.125)',
-    elevated: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 8px 12px rgba(0, 0, 0, 0.125)'
+    elevated:
+      '0 1px 2px rgba(0, 0, 0, 0.0625), 0 8px 12px rgba(0, 0, 0, 0.125)',
   },
   text: {
     heading: {
       fontWeight: 'bold',
-      lineHeight: 'heading'
+      lineHeight: 'heading',
     },
     title: {
       fontWeight: 'bold',
       lineHeight: 'title',
       letterSpacing: 'title',
-      fontSize: [4, 5, 6]
+      fontSize: [4, 5, 6],
     },
     subtitle: {
       fontSize: [2, 3, null, null, 4],
       fontWeight: 'body',
       letterSpacing: 'headline',
-      lineHeight: 'subheading'
+      lineHeight: 'subheading',
     },
     headline: {
       fontWeight: 'bold',
@@ -121,7 +123,7 @@ const theme = {
       textAlign: 'center',
       textTransform: 'uppercase',
       mt: 0,
-      mb: [3, 4]
+      mb: [3, 4],
     },
     subheadline: {
       fontWeight: 'bold',
@@ -129,25 +131,25 @@ const theme = {
       letterSpacing: 'headline',
       fontSize: [2, 3],
       mt: 0,
-      mb: 2
+      mb: 2,
     },
     caption: {
       color: 'muted',
       fontFamily: 'accent',
       fontWeight: 'body',
-      letterSpacing: 'headline'
+      letterSpacing: 'headline',
     },
     accent: {
-      fontFamily: 'accent'
-    }
+      fontFamily: 'accent',
+    },
   },
   badges: {
     pill: {
       borderRadius: 'circle',
       px: 2,
       py: 1,
-      fontSize: 1
-    }
+      fontSize: 1,
+    },
   },
   buttons: {
     primary: {
@@ -156,23 +158,22 @@ const theme = {
       cursor: 'pointer',
       fontFamily: 'inherit',
       fontWeight: 'bold',
-      svg: { ml: -1, mr: 2 }
+      svg: { ml: -1, mr: 2 },
     },
     outline: {
       variant: 'buttons.primary',
       bg: 'transparent',
       color: 'primary',
-      border: '2px solid currentColor'
-    }
+      border: '2px solid currentColor',
+    },
   },
   cards: {
     primary: {
       bg: 'elevated',
       color: 'text',
       p: [3, 4],
-      borderRadius: 'extra',
-      boxShadow: 'card',
-      position: 'relative'
+      borderRadius: 0,
+      position: 'relative',
     },
     interactive: {
       variant: 'cards.primary',
@@ -181,30 +182,29 @@ const theme = {
       transition: 'transform .125s ease-in-out, box-shadow .125s ease-in-out',
       ':hover,:focus': {
         transform: 'scale(1.0625)',
-        boxShadow: 'elevated'
-      }
-    }
+      },
+    },
   },
   layout: {
     container: {
       maxWidth: ['copyPlus', null, 'layout', null, 'layoutPlus'],
       width: '100%',
       mx: 'auto',
-      px: 3
+      px: 3,
     },
     wide: {
       variant: 'layout.container',
       px: [3, null, 4],
-      maxWidth: ['wide', null, null, null, 'widePlus']
+      maxWidth: ['wide', null, null, null, 'widePlus'],
     },
     copy: {
       variant: 'layout.container',
-      maxWidth: ['copy', null, null, null, 'copyPlus']
+      maxWidth: ['copy', null, null, null, 'copyPlus'],
     },
     narrow: {
       variant: 'layout.container',
-      maxWidth: ['narrow', null, 'narrowPlus', null, 'layout']
-    }
+      maxWidth: ['narrow', null, 'narrowPlus', null, 'layout'],
+    },
   },
   styles: {
     root: {
@@ -213,41 +213,39 @@ const theme = {
       fontWeight: 'body',
       color: 'text',
       margin: 0,
-      minHeight: '100vh'
+      minHeight: '100vh',
     },
     h2: {
       variant: 'text.heading',
       my: 0,
-      fontSize: [4, 5]
+      fontSize: [4, 5],
     },
     p: {
       color: 'text',
       fontWeight: 'body',
-      lineHeight: 'body'
+      lineHeight: 'body',
     },
     a: {
       color: 'primary',
-      textUnderlinePosition: 'under'
+      textUnderlinePosition: 'under',
     },
     code: {
       fontFamily: 'monospace',
-      fontSize: 'inherit'
+      fontSize: 'inherit',
     },
     img: {
-      maxWidth: '100%'
+      maxWidth: '100%',
     },
     hr: {
       border: 0,
       py: 1,
-      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${
-        colors.orange
-      } 100%)`,
+      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange} 100%)`,
       borderRadius: 999,
       maxWidth: 256,
       mx: 'auto',
-      my: 5
-    }
-  }
+      my: 5,
+    },
+  },
 }
 
 theme.util = {
@@ -255,7 +253,7 @@ theme.util = {
   reduceMotion: '@media (prefers-reduced-motion: reduce)',
   supportsClipText: '@supports (-webkit-background-clip: text)',
   supportsBackdrop:
-    '@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)'
+    '@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)',
 }
 
 theme.cards.translucent = {
@@ -265,8 +263,8 @@ theme.cards.translucent = {
   [theme.util.supportsBackdrop]: {
     backgroundColor: 'rgba(255, 255, 255, 0.75)',
     backdropFilter: 'saturate(180%) blur(20px)',
-    WebkitBackdropFilter: 'saturate(180%) blur(20px)'
-  }
+    WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+  },
 }
 theme.cards.translucentDark = {
   backgroundColor: 'rgba(0, 0, 0, 0.875)',
@@ -275,8 +273,8 @@ theme.cards.translucentDark = {
   [theme.util.supportsBackdrop]: {
     backgroundColor: 'rgba(0, 0, 0, 0.625)',
     backdropFilter: 'saturate(180%) blur(16px)',
-    WebkitBackdropFilter: 'saturate(180%) blur(16px)'
-  }
+    WebkitBackdropFilter: 'saturate(180%) blur(16px)',
+  },
 }
 
 export default theme

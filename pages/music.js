@@ -6,9 +6,9 @@ import Header from '../components/header'
 import SongList from '../components/music/song-list'
 import Player from '../components/music/player'
 
-import twentyAlbums from '../data/twenty-albums.json'
-import topSongs from '../data/top-songs.json'
-import monthlySongs from '../data/monthly-songs.json'
+// import twentyAlbums from '../data/twenty-albums.json'
+// import topSongs from '../data/top-songs.json'
+// import monthlySongs from '../data/monthly-songs.json'
 import { capitalize } from 'lodash'
 
 const seasons = { spring, summer, fall }

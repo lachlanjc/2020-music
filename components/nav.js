@@ -5,7 +5,7 @@ import {
   Container,
   IconButton,
   Flex,
-  NavLink
+  NavLink,
 } from 'theme-ui'
 import Link from 'next/link'
 import { Moon } from 'react-feather'
@@ -18,9 +18,9 @@ const NavButton = ({ sx, ...props }) => (
       transition: 'box-shadow .125s ease-in-out',
       ':hover,:focus': {
         boxShadow: '0 0 0 2px',
-        outline: 'none'
+        outline: 'none',
       },
-      ...sx
+      ...sx,
     }}
   />
 )
@@ -45,28 +45,27 @@ const Nav = () => {
       as="nav"
       colorMode={mode}
       sx={{
-        color: 'white',
         py: 3,
         top: 0,
         left: 0,
         right: 0,
         position: 'absolute',
-        zIndex: 2
+        zIndex: 2,
       }}
     >
       <Container
         sx={{
           display: 'flex',
           alignItems: 'center',
+          fontFamily: 'heading',
           a: {
-            display: 'flex',
-            alignItems: 'center',
             fontSize: 1,
-            color: 'white',
+            fontWeight: 'body',
+            color: 'inherit',
             textDecoration: 'none',
             mr: [3, 4],
-            ':focus,:hover': { color: 'accent' }
-          }
+            ':focus,:hover': { color: 'accent' },
+          },
         }}
       >
         <Link href="/" passHref>
@@ -77,8 +76,8 @@ const Nav = () => {
               mr: 'auto !important',
               lineHeight: 'title',
               ':hover img,:focus img': {
-                boxShadow: '0 0 0 2px'
-              }
+                boxShadow: '0 0 0 2px',
+              },
             }}
           >
             <Avatar
