@@ -9,7 +9,6 @@ const PlayButton = props => (
       position: 'absolute',
       top: '25%',
       left: '25%',
-      transform: 'translate(-50%)',
       transform: 'scale(0)',
       transition: 'transform 0.125s ease-in-out',
     }}
@@ -19,7 +18,7 @@ const PlayButton = props => (
   </IconButton>
 )
 
-const Artwork = ({ src, alt, size = 64 }) => (
+const Artwork = ({ src, alt, size = 64, sx }) => (
   <Box
     sx={{
       cursor: 'pointer',
@@ -27,6 +26,7 @@ const Artwork = ({ src, alt, size = 64 }) => (
       lineHeight: 0,
       borderRadius: size < 100 ? 'small' : 'default',
       overflow: 'hidden',
+      ...sx,
     }}
   >
     <Image

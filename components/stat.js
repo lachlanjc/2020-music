@@ -39,8 +39,8 @@ const Stat = ({ value, label, color = 'currentColor' }) => (
         position: 'absolute',
         left: 0,
         top: 0,
-        opacity: 0.75
-      }
+        opacity: 0.75,
+      },
     }}
   >
     <Arc />
@@ -51,7 +51,7 @@ const Stat = ({ value, label, color = 'currentColor' }) => (
         lineHeight: 'title',
         letterSpacing: 'title',
         fontSize: value.toString().length > 2 ? 4 : 6,
-        lineHeight: '64px'
+        lineHeight: '64px',
       }}
     >
       {value}
@@ -63,8 +63,7 @@ const Stat = ({ value, label, color = 'currentColor' }) => (
         mt: 3,
         border: '3px solid',
         borderColor: 'background',
-        fontFamily: 'accent',
-        bg: color
+        bg: color,
       }}
     >
       {label}

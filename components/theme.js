@@ -1,7 +1,7 @@
 export const colors = {
-  darker: '#121217',
-  dark: '#17171d',
-  darkless: '#252429',
+  darker: '#181611',
+  dark: '#1F1C15',
+  darkless: '#292724',
 
   black: '#1f2d3d',
   steel: '#273444',
@@ -11,12 +11,18 @@ export const colors = {
   snow: '#f9fafc',
   white: '#ffffff',
 
-  red: '#ec3750',
-  orange: '#ff8c37',
-  yellow: '#f1c40f',
-  green: '#33d6a6',
-  cyan: '#5bc0de',
-  blue: '#338eda',
+  brown: '#470C06',
+  lighter: '#F6D3B4',
+  light: '#FDEEE1',
+  lightless: '#F6C79C',
+  placeholder: '#E1C2A6',
+  peach: '#E88161',
+  primary: '#E32310',
+  muted: '#CF876B',
+  secondary: '#C0704B',
+  accent: '#69A5A8',
+
+  music: '#FF365D',
 }
 
 const theme = {
@@ -27,17 +33,11 @@ const theme = {
   useColorSchemeMediaQuery: true,
   colors: {
     ...colors,
-    text: '#470C06',
-    background: '#fdeee1',
-    elevated: '#f6d3b4',
-    sunken: '#F6D3B4',
-    border: '#F6D3B4',
-    placeholder: '#E1C2A6',
-    secondary: colors.slate,
-    primary: '#E32310',
-    muted: '#CF876B',
-    accent: '#69A5A8',
-    music: '#ff365d',
+    text: colors.brown,
+    background: colors.light,
+    elevated: colors.lighter,
+    sunken: colors.lightless,
+    border: colors.placeholder,
     modes: {
       dark: {
         text: colors.white,
@@ -45,7 +45,6 @@ const theme = {
         elevated: colors.darkless,
         sunken: colors.darker,
         border: colors.darkless,
-        placeholder: colors.slate,
         secondary: colors.muted,
       },
     },
@@ -55,8 +54,6 @@ const theme = {
       'ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     body:
       'ui-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    accent:
-      '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     monospace:
       'ui-monospace, "SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace',
   },
@@ -80,7 +77,7 @@ const theme = {
   sizes: {
     widePlus: 2048,
     wide: 1536,
-    layoutPlus: 1200,
+    layoutPlus: 1280,
     layout: 1024,
     copyPlus: 768,
     copy: 680,
@@ -116,12 +113,10 @@ const theme = {
       lineHeight: 'subheading',
     },
     headline: {
+      fontFamily: 'body',
       fontWeight: 'bold',
       lineHeight: 'heading',
-      letterSpacing: 'headline',
-      fontSize: 4,
-      textAlign: 'center',
-      textTransform: 'uppercase',
+      fontSize: [4, null, 5],
       mt: 0,
       mb: [3, 4],
     },
@@ -135,12 +130,9 @@ const theme = {
     },
     caption: {
       color: 'muted',
-      fontFamily: 'accent',
+      fontFamily: 'heading',
       fontWeight: 'body',
       letterSpacing: 'headline',
-    },
-    accent: {
-      fontFamily: 'accent',
     },
   },
   badges: {
@@ -187,7 +179,7 @@ const theme = {
   },
   layout: {
     container: {
-      maxWidth: ['copyPlus', null, 'layout', null, 'layoutPlus'],
+      maxWidth: ['copyPlus', null, 'layout', 'layoutPlus'],
       width: '100%',
       mx: 'auto',
       px: 3,

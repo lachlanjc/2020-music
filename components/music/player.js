@@ -14,7 +14,8 @@ const Player = ({ url, onClose }) => {
   const ref = useRef(null)
   const { width, height } = useComponentSize(ref)
   const [colorMode] = useColorMode()
-  const [mini, setMini] = useState(false)
+  const isAlbum = url?.includes('album.link') || false
+  const [mini, setMini] = useState(isAlbum)
   return (
     <Box
       ref={ref}
@@ -29,14 +30,14 @@ const Player = ({ url, onClose }) => {
           ? 128 + TOOLBAR_HEIGHT
           : [256 + TOOLBAR_HEIGHT, null, null, 384 + TOOLBAR_HEIGHT],
         position: 'fixed',
-        left: 3,
-        right: 3,
+        left: '50%',
         bottom: 3,
         zIndex: 3,
         overflow: 'hidden',
         transition: 'transform 0.375s ease-in-out',
         transform:
-          url !== null && url !== '' ? 'translateY(0)' : 'translateY(200%)',
+          'translateX(-50%) ' +
+          (url !== null && url !== '' ? 'translateY(0)' : 'translateY(200%)'),
       }}
     >
       <Flex
@@ -59,9 +60,11 @@ const Player = ({ url, onClose }) => {
           },
         }}
       >
-        <IconButton onClick={e => setMini(m => !m)} mr={2}>
-          {mini ? <Maximize /> : <VideoOff />}
-        </IconButton>
+        {!isAlbum && (
+          <IconButton onClick={e => setMini(m => !m)} mr={2}>
+            {mini ? <Maximize /> : <VideoOff />}
+          </IconButton>
+        )}
         <IconButton onClick={onClose}>
           <X />
         </IconButton>
