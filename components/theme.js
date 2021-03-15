@@ -38,6 +38,7 @@ const theme = {
     elevated: colors.lighter,
     sunken: colors.lightless,
     border: colors.placeholder,
+    cloud: colors.light,
     modes: {
       dark: {
         text: colors.white,
@@ -46,6 +47,7 @@ const theme = {
         sunken: colors.darker,
         border: colors.darkless,
         secondary: colors.muted,
+        cloud: colors.placeholder,
       },
     },
   },
