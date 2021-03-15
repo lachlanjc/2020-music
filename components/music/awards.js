@@ -8,7 +8,7 @@ const Label = props => (
     as="strong"
     sx={{
       color: 'muted',
-      fontSize: 2,
+      fontSize: [1, 2],
       letterSpacing: 'headline',
       fontFamily: 'heading',
       textTransform: 'uppercase',
@@ -21,7 +21,7 @@ const Name = ({ fontSize, ...props }) => (
   <Text
     as="strong"
     sx={{
-      fontSize: props.children.length > 32 ? [2, 3, 4] : [2, 3, 4, 5],
+      fontSize: [3, 4, 5],
       display: 'block',
       lineHeight: 'heading',
       my: 1,

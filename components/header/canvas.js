@@ -6,6 +6,7 @@ import { useLoader, useUpdate } from 'react-three-fiber'
 import usePrefersMotion from '../../lib/use-prefers-motion'
 import { Canvas, useFrame } from 'react-three-fiber'
 import { Environment } from '@react-three/drei'
+import useComponentSize from '@rehooks/component-size'
 
 function Text({
   children,
@@ -129,15 +130,18 @@ const Magic = ({ text, count, radius, start = 0, position }) => {
 }
 
 const HeaderCanvas = () => {
+  const ref = useRef(null)
+  const { width } = useComponentSize(ref)
   return (
     <Canvas
+      ref={ref}
       colorManagement
       orthographic
-      camera={{ zoom: 20, position: [0, -50, 30] }}
+      camera={{ zoom: 20, position: [0, -48, 32] }}
       aria-hidden
     >
       <directionalLight position={[-20, 10, 20]} color="#69A5A8" />
-      <directionalLight position={[20, -10, -3]} color="#69A5A8" />
+      <directionalLight position={[20, -10, -3]} color="#C0704B" />
       <ambientLight color="#E5663B" />
       <Suspense fallback={null}>
         <Environment preset="sunset" />

@@ -86,7 +86,10 @@ const Nav = () => {
               alt="Avatar"
               sx={{ mr: 2, transition: 'box-shadow .125s ease-in-out' }}
             />
-            <NavLink as="span" sx={{ color: 'inherit !important' }}>
+            <NavLink
+              as="span"
+              sx={{ color: 'inherit !important', textTransform: 'uppercase' }}
+            >
               One More Year
             </NavLink>
           </Flex>
