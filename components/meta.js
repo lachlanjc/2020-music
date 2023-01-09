@@ -8,7 +8,7 @@ const Meta = ({
   title = name,
   description = 'Looking back at Lachlan Campbell’s 2020.',
   image = 'https://2020.lachlanjc.com/card.png',
-  color = colors.primary
+  color = colors.primary,
 }) => (
   <Head>
     <meta key="og_type" property="og:type" content="website" />
@@ -29,12 +29,6 @@ const Meta = ({
       content="summary_large_image"
     />
     <meta key="twitter_img" name="twitter:image" content={image} />
-    <link
-      key="safari_icon"
-      rel="mask-icon"
-      href="/safari-pinned-tab.svg"
-      color={color}
-    />
     <link
       key="apple_icon"
       rel="apple-touch-icon"

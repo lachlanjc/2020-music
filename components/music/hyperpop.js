@@ -31,7 +31,7 @@ const Hyperpop = () => {
   useEffect(() => {
     const changeEmotion = () =>
       setEmotion(e => (e === emotions.length - 1 ? 0 : e + 1))
-    const interval = setInterval(changeEmotion, 750)
+    const interval = setInterval(changeEmotion, 450)
     return () => {
       clearInterval(interval)
     }

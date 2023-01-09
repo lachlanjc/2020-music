@@ -5,9 +5,7 @@ import {
   Container,
   IconButton,
   Flex,
-  NavLink,
 } from 'theme-ui'
-import Link from 'next/link'
 import { Moon } from 'react-bootstrap-icons'
 
 const NavButton = ({ sx, ...props }) => (
@@ -68,38 +66,25 @@ const Nav = () => {
           },
         }}
       >
-        <Link href="/" passHref>
-          <Flex
-            as="a"
-            sx={{
-              alignItems: 'center',
-              mr: 'auto !important',
-              lineHeight: 'title',
-              ':hover img,:focus img': {
-                boxShadow: '0 0 0 2px',
-              },
-            }}
-          >
-            <Avatar
-              size={36}
-              src="https://github.com/lachlanjc.png"
-              alt="Avatar"
-              sx={{ mr: 2, transition: 'box-shadow .125s ease-in-out' }}
-            />
-            <NavLink
-              as="span"
-              sx={{ color: 'inherit !important', textTransform: 'uppercase' }}
-            >
-              One More Year
-            </NavLink>
-          </Flex>
-        </Link>
-        <Link href="/activity" passHref>
-          <NavLink as="a">Activity</NavLink>
-        </Link>
-        <Link href="/music" passHref>
-          <NavLink as="a">Music</NavLink>
-        </Link>
+        <Flex
+          as="a"
+          sx={{
+            alignItems: 'center',
+            mr: 'auto !important',
+            lineHeight: 'title',
+            ':hover img,:focus img': {
+              boxShadow: '0 0 0 2px',
+            },
+          }}
+        >
+          <Avatar
+            size={36}
+            src="https://github.com/lachlanjc.png"
+            alt="Avatar"
+            sx={{ mr: 2, transition: 'box-shadow .125s ease-in-out' }}
+          />
+          <span>One More Year</span>
+        </Flex>
         <ColorSwitcher />
       </Container>
     </Box>
