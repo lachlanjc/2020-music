@@ -43,7 +43,7 @@ const SongList = ({
         {monthly ? (
           <Badge
             sx={{
-              bg: 'muted',
+              bg: 'accent',
               color: 'background',
               fontFamily: 'heading',
               fontSize: monthly ? 0 : 1,

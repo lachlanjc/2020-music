@@ -5,9 +5,9 @@ import { PlayCircle } from 'react-bootstrap-icons'
 
 const Label = props => (
   <Text
-    as="strong"
+    as="span"
     sx={{
-      color: 'muted',
+      color: 'accent',
       fontSize: [1, 2],
       letterSpacing: 'headline',
       fontFamily: 'heading',
@@ -21,6 +21,7 @@ const Name = ({ fontSize, ...props }) => (
   <Text
     as="strong"
     sx={{
+      fontFamily: 'heading',
       fontSize: [3, 4, 5],
       display: 'block',
       lineHeight: 'heading',
@@ -100,7 +101,7 @@ export const Album = ({
       <Text
         as="span"
         variant="caption"
-        sx={{ fontFamily: 'body', fontSize: [1, 2], color: 'muted' }}
+        sx={{ fontFamily: 'heading', fontSize: [1, 2], color: 'muted' }}
       >
         {artist}
       </Text>

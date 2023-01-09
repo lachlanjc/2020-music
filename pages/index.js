@@ -94,7 +94,7 @@ const MusicPage = () => {
           personality than traditional pop.
         </Comment>
       </Grid>
-      <Box as="section" sx={{ bg: 'sunken', py: [4, 5] }}>
+      <Box as="section" sx={{ bg: 'elevated', py: [4, 5] }}>
         <Heading as="h2" variant="headline" sx={{ px: [3, 5] }}>
           Month-by-month soundtrack
         </Heading>

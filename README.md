@@ -1,5 +1,5 @@
-# 2020
+# One More Year
 
-[@lachlanjc](https://lachlanjc.com)’s 2020 year in review!
+[@lachlanjc](https://lachlanjc.com)’s favorite music of 2020.
 
-[**2020.lachlanjc.com**](https://2020.lachlanjc.com)
+[**onemoreyear.lachlanjc.com**](https://onemoreyear.lachlanjc.com)
