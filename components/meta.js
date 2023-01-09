@@ -1,12 +1,11 @@
 import Head from 'next/head'
 import { colors } from './theme'
 
-const name = '2020 in Review – @lachlanjc'
-const makeTitle = title => (title === name ? title : `${title} – ${name}`)
+const name = '@lachlanjc’s 2020 Music'
 
 const Meta = ({
   title = name,
-  description = 'Looking back at Lachlan Campbell’s 2020.',
+  description = 'Lachlan Campbell’s top music of 2020.',
   image = 'https://2020.lachlanjc.com/card.png',
   color = colors.primary,
 }) => (
@@ -14,9 +13,9 @@ const Meta = ({
     <meta key="og_type" property="og:type" content="website" />
     <meta key="og_site" property="og:site_name" content={name} />
     <meta key="twitter_site" name="twitter:site" content="@lachlanjc" />
-    <title>{makeTitle(title)}</title>
-    <meta key="og_title" property="og:title" content={makeTitle(title)} />
-    <meta key="twitter_title" name="twitter:title" content={makeTitle(title)} />
+    <title>{title}</title>
+    <meta key="og_title" property="og:title" content={title} />
+    <meta key="twitter_title" name="twitter:title" content={title} />
     <meta key="desc" name="description" content={description} />
     <meta key="og_desc" property="og:description" content={description} />
     <meta key="twitter_desc" name="twitter:description" content={description} />

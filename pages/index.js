@@ -18,7 +18,6 @@ const MusicPage = () => {
 
   return (
     <Box as="main" sx={{ color: 'text' }}>
-      <Meta title="Music" description="Lachlan Campbell’s top music of 2020." />
       <Grid
         as="section"
         variant="layout.container"

@@ -76,7 +76,9 @@ const SongList = ({
           alt={getAlbum(song.album)}
         />
         <Flex sx={{ flexDirection: 'column', width: '100%' }}>
-          <strong>{song.title}</strong>
+          <Text as="strong" sx={{ fontFamily: 'heading' }}>
+            {song.title}
+          </Text>
           <Text as="small" variant="caption">
             {song.artist} – {getAlbum(song.album)}
           </Text>

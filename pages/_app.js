@@ -1,6 +1,7 @@
 import * as React from 'react'
 import App from 'next/app'
 import { ThemeProvider } from 'theme-ui'
+import '../public/fonts.css'
 
 import theme from '../components/theme'
 import Meta from '../components/meta'

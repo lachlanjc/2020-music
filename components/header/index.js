@@ -29,33 +29,15 @@ const Header = () => {
       sx={{
         position: 'relative',
         bg: 'accent',
-        pb: '9vh',
+        pt: '9vh',
+        pb: '7vh',
         mb: '9vh',
         overflow: 'hidden',
         minHeight: ['75vh', '50vh'],
         'div, canvas': {
-          minHeight: ['75vh', '50vh'],
+          minHeight: 460,
           display: 'block',
         },
-        // '::before,::after': {
-        //   content: '""',
-        //   left: 0,
-        //   right: 0,
-        //   display: 'block',
-        //   position: 'absolute',
-        //   height: '12vh',
-        // },
-        // '::before': {
-        //   top: 0,
-        //   backgroundImage: t =>
-        //     `linear-gradient(to bottom, ${t.colors.accent}, ${t.colors.elevated})`,
-        // },
-        // '::after': {
-        //   bottom: '0',
-        //   transform: 'translateY(9vh)',
-        //   backgroundImage: t =>
-        //     `linear-gradient(to bottom, ${t.colors.accent}, ${t.colors.background})`,
-        // },
       }}
     >
       <svg width="0" height="0">

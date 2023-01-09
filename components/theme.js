@@ -53,9 +53,8 @@ const theme = {
   },
   fonts: {
     heading:
-      'ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    body:
-      'ui-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      '"Noir Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     monospace:
       'ui-monospace, "SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace',
   },
@@ -99,23 +98,26 @@ const theme = {
   },
   text: {
     heading: {
+      fontFamily: 'heading',
       fontWeight: 'bold',
       lineHeight: 'heading',
     },
     title: {
+      fontFamily: 'heading',
       fontWeight: 'bold',
       lineHeight: 'title',
       letterSpacing: 'title',
       fontSize: [4, 5, 6],
     },
     subtitle: {
+      fontFamily: 'heading',
       fontSize: [2, 3, null, null, 4],
       fontWeight: 'body',
       letterSpacing: 'headline',
       lineHeight: 'subheading',
     },
     headline: {
-      fontFamily: 'body',
+      fontFamily: 'heading',
       fontWeight: 'bold',
       lineHeight: 'heading',
       fontSize: [4, null, 5],
@@ -123,6 +125,7 @@ const theme = {
       mb: [3, 4],
     },
     subheadline: {
+      fontFamily: 'heading',
       fontWeight: 'bold',
       lineHeight: 'heading',
       letterSpacing: 'headline',
@@ -132,7 +135,6 @@ const theme = {
     },
     caption: {
       color: 'muted',
-      fontFamily: 'heading',
       fontWeight: 'body',
       letterSpacing: 'headline',
     },

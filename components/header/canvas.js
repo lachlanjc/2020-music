@@ -4,9 +4,8 @@ import gsap from 'gsap'
 import React, { Suspense, useEffect, useMemo, useRef } from 'react'
 import { useLoader, useUpdate } from 'react-three-fiber'
 import usePrefersMotion from '../../lib/use-prefers-motion'
-import { Canvas, useFrame } from 'react-three-fiber'
+import { Canvas } from 'react-three-fiber'
 import { Environment } from '@react-three/drei'
-import useComponentSize from '@rehooks/component-size'
 
 function Text({
   children,
@@ -61,24 +60,22 @@ function Text({
   }, [prefersMotion])
 
   return (
-    <>
-      <group {...props} scale={[0.1 * size, 0.1 * size, 0.1]}>
-        <mesh
-          ref={mesh}
-          rotation={[Math.PI * 0.5, 0, 0]}
-          receiveShadow
-          castShadow
-        >
-          <textBufferGeometry args={[children, config]} />
-          <meshStandardMaterial
-            attach="material"
-            metalness={0.2}
-            roughness={0.3}
-            color="#E32310"
-          />
-        </mesh>
-      </group>
-    </>
+    <group {...props} scale={[0.1 * size, 0.1 * size, 0.1]}>
+      <mesh
+        ref={mesh}
+        rotation={[Math.PI * 0.5, 0, 0]}
+        receiveShadow
+        castShadow
+      >
+        <textBufferGeometry args={[children, config]} />
+        <meshStandardMaterial
+          attach="material"
+          metalness={0.2}
+          roughness={0.3}
+          color="#E32310"
+        />
+      </mesh>
+    </group>
   )
 }
 
@@ -86,9 +83,6 @@ const { PI, sin, cos } = Math
 
 const Letter = ({ i, count, radius, l }) => {
   const $ref = useRef()
-  useFrame(({ clock }) => {
-    const t = clock.getElapsedTime()
-  })
   return (
     <group ref={$ref} rotation={[0, 0, 0]}>
       <Text
@@ -106,7 +100,7 @@ const Letter = ({ i, count, radius, l }) => {
   )
 }
 
-const Magic = ({ text, count, radius, start = 0, position }) => {
+const Magic = ({ text, count, radius, position }) => {
   const $ref = useRef()
   const prefersMotion = usePrefersMotion()
 
@@ -131,7 +125,6 @@ const Magic = ({ text, count, radius, start = 0, position }) => {
 
 const HeaderCanvas = () => {
   const ref = useRef(null)
-  const { width } = useComponentSize(ref)
   return (
     <Canvas
       ref={ref}
@@ -145,8 +138,7 @@ const HeaderCanvas = () => {
       <ambientLight color="#E5663B" />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
-        <Magic text={'ONE MORE YEAR'} count={14} radius={15} />
-        {/* <Magic text={"YEAR"} start={Math.PI * 1.18} count={4} radius={8} /> */}
+        <Magic text="ONE MORE YEAR" count={14} radius={15} />
       </Suspense>
       {/* <OrbitControls /> */}
     </Canvas>
